@@ -1,11 +1,10 @@
-import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
-
+import ItemListContainer from "./pages/itemListContainer/ItemListContainer.jsx";
 function App() {
   return (
     <div>
       <Navbar />
-      <Footer />
+      <ItemListContainer greeting={"¡Bienvenida/o a Terra Florens!"} />
     </div>
   );
 }

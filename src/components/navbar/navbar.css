@@ -1,0 +1,43 @@
+/*
+#F5DAD2 - rosa
+#FCFFE0 - beige
+#BACD92 - verde claro
+#75A47F - verde oscuro
+#B5C0D0 - gris
+*/
+
+.NavbarContainer {
+  background-color: #75a47f;
+  margin-left: 80px;
+  margin-right: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding-left: 15px;
+  padding-right: 35px;
+}
+
+.categoriesList {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+li {
+  list-style: none;
+}
+
+.cartNumber {
+  font-weight: bold;
+  position: fixed;
+  right: 190px;
+  top: 20px;
+  border-radius: 50%;
+  background-color: antiquewhite;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
