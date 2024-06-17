@@ -14,7 +14,6 @@ const Navbar = () => {
       <ul className="categoriesList">
         <li>Interior</li>
         <li>Exterior</li>
-        <li>Macetas</li>
       </ul>
       <span className="cartNumber">0</span>
       <div className="cartIcon">
