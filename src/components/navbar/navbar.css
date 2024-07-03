@@ -28,16 +28,6 @@ li {
   list-style: none;
 }
 
-.cartNumber {
-  font-weight: bold;
-  position: fixed;
-  right: 190px;
-  top: 20px;
-  border-radius: 50%;
-  background-color: antiquewhite;
-  width: 1.5rem;
-  height: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.mainIcon {
+  width: 20%;
 }
