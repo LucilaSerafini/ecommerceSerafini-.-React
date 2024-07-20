@@ -1,0 +1,26 @@
+.counterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counterContainer p {
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.css-1rwt2y5-MuiButtonBase-root-MuiButton-root {
+  background-color: #a1a8be;
+  border: none;
+  color: #2e3038;
+  padding: 6px;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 70px;
+}
+
+.css-1rwt2y5-MuiButtonBase-root-MuiButton-root:hoover {
+  border: #faebe6;
+}

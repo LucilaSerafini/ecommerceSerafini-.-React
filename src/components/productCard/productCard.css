@@ -1,0 +1,15 @@
+.cardContainer {
+  height: 60%;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardActions {
+  justify-content: center;
+}

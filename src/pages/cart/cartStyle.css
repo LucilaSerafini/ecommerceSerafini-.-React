@@ -1,0 +1,27 @@
+.cartImg {
+  border-radius: 1.5rem;
+  width: 120px;
+}
+
+.cartDetailContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.cartContainer {
+  border-radius: 4rem;
+  padding: 1rem;
+  width: 60%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  align-items: center;
+  border: 2px solid #a1a8be;
+}
+
+.TfiTrash {
+  font-size: 24px;
+}

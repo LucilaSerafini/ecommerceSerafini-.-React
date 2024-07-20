@@ -1,17 +1,21 @@
 import CounterContainer from "../../components/counter/CounterContainer";
+import "./itemDetail.css";
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item, onAdd, initial }) => {
   return (
-    <>
-      <div>
-        <img src={item.img} alt="Imagen del producto" />
-        <h2>{item.title}</h2>
-        <h3>{item.description}</h3>
-        <h4>{item.price}</h4>
+    <div className="itemDetailContainer">
+      <div className="itemDetail">
+        <img
+          src={item.img}
+          className="cardDetailImg"
+          alt="Imagen del producto"
+        />
+        <p>{item.title}</p>
+        <p>{item.price}</p>
 
-        <CounterContainer />
+        <CounterContainer onAdd={onAdd} stock={item.stock} initial={initial} />
       </div>
-    </>
+    </div>
   );
 };
 

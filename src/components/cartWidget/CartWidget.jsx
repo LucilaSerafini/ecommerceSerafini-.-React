@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
 import { Badge } from "@mui/material";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { RiShoppingBag4Line } from "react-icons/ri";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 const CartWidget = () => {
+  const { getTotalItems } = useContext(CartContext);
+  let total = getTotalItems();
+
   return (
     <Link to="/carrito">
-      <Badge badgeContent={0} color="primary" showZero={true}>
-        <ShoppingCartIcon color="white" />
+      <Badge badgeContent={total} showZero={true} className="customBadge">
+        <RiShoppingBag4Line size="1.6rem" color="#2e3038" />
       </Badge>
     </Link>
   );

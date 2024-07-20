@@ -1,8 +1,10 @@
 import "./itemListContainer.css";
-import { products } from "../../products";
 import { useEffect, useState } from "react";
 import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
+import { db } from "../../firebaseConfig";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { products } from "../../products";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -10,27 +12,22 @@ const ItemListContainer = () => {
   const { name } = useParams();
 
   useEffect(() => {
-    const getProducts = new Promise((resolve, reject) => {
-      let x = true;
-      let arrayFiltered = products.filter(
-        (product) => product.category === name
-      );
+    let productsCollection = collection(db, "products");
 
-      if (x) {
-        resolve(name ? arrayFiltered : products);
-      } else {
-        reject({ message: "error" });
-      }
-    });
+    let consulta = productsCollection;
 
-    getProducts
-      .then((res) => {
-        setItems(res);
-      })
+    if (name) {
+      consulta = query(productsCollection, where("category", "==", name));
+    }
 
-      .catch((error) => {
-        setError(error);
+    let getProducts = getDocs(consulta);
+    //Hay que desencriptar el documento con .data para otener toda la información.
+    getProducts.then((res) => {
+      let validArray = res.docs.map((product) => {
+        return { ...product.data(), id: product.id };
       });
+      setItems(validArray);
+    });
   }, [name]);
 
   return <ItemList items={items} />;

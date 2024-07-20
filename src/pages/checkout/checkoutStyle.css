@@ -1,0 +1,46 @@
+/* Estilo general del formulario */
+.checkoutContainer {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #2e3038; /* Violeta oscuro */
+  border-radius: 10px;
+  background-color: #a1a8be;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #2e3038; /* Violeta oscuro */
+  margin-bottom: 20px;
+}
+
+.checkoutForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos del formulario */
+}
+
+.inputField {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #2e3038; /* Violeta oscuro */
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+.inputField:focus {
+  border-color: #a1a8be; /* Violeta claro */
+  outline: none;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+}

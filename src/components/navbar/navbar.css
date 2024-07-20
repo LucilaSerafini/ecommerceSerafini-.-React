@@ -1,19 +1,16 @@
 /*
-#F5DAD2 - rosa
-#FCFFE0 - beige
-#BACD92 - verde claro
-#75A47F - verde oscuro
-#B5C0D0 - gris
+#a1a8be - Violeta
+#2e3038 - Violeta oscuro (letras)
+#BA9F38 - Mostaza 
+#F3D0C3 - Rosa 
 */
 
 .NavbarContainer {
-  background-color: #75a47f;
-  margin-left: 80px;
-  margin-right: 125px;
+  background-color: #a1a8be;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 90px;
+  height: 150px;
   padding-left: 15px;
   padding-right: 35px;
 }
@@ -22,6 +19,7 @@
   display: flex;
   justify-content: space-between;
   gap: 100px;
+  margin-right: 400px;
 }
 
 li {
@@ -29,5 +27,13 @@ li {
 }
 
 .mainIcon {
-  width: 20%;
+  width: 60%;
+}
+
+.customBadge .MuiBadge-badge {
+  background-color: #f3d0c3;
+  color: #2e3038;
+  padding: 0 6px;
+  font-size: 0.75rem;
+  font-weight: bold;
 }
