@@ -1,4 +1,4 @@
-![] (https://res.cloudinary.com/dmsa4jynu/image/upload/v1721427445/MainIcon-Photoroom_ou8rj5.png)
+![](https://res.cloudinary.com/dmsa4jynu/image/upload/v1719962337/MainIcon_v4zojt.png)
 
 # Terra Florens
 
