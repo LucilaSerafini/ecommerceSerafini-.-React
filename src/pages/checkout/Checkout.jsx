@@ -6,6 +6,7 @@ import { addDoc, collection, updateDoc, doc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+import Swal from "sweetalert2";
 
 const Checkout = () => {
   const navigate = useNavigate();
@@ -35,15 +36,12 @@ const Checkout = () => {
     addDoc(ordersCollection, order)
       .then((res) => {
         setOrderId(res.id);
-        toast.success(
-          `¡Gracias por tu compra! El n° de orden de compra es: ${res.id}`
-        );
       })
       .catch()
       .finally(() => {
-        clearCart();
-
         navigate("/");
+        toast.success(`¡Gracias por tu compra!`);
+        clearCart();
       });
   };
 
@@ -51,6 +49,22 @@ const Checkout = () => {
     setUser({ ...user, [event.target.name]: event.target.value });
   };
 
+  const handleCancel = () => {
+    Swal.fire({
+      title: "¿Desea cancelar la compra?",
+      showDenyButton: true,
+      confirmButtonText: "Si",
+      denyButtonText: `No`,
+      denyButtonColor: "#2e3038",
+      confirmButtonColor: "#2e3038",
+      background: "#a1a8be",
+      color: "#2e3038",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        navigate("/");
+      }
+    });
+  };
   return (
     <div className="checkoutContainer">
       <h1>Completá tus datos</h1>
@@ -83,7 +97,8 @@ const Checkout = () => {
           />
           <div className="buttonGroup">
             <Button
-              type="submit"
+              onClick={handleCancel}
+              type="button"
               variant="contained"
               style={{
                 backgroundColor: "#F3D0C3",

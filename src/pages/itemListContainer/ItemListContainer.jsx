@@ -4,6 +4,7 @@ import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
 import { db } from "../../firebaseConfig";
 import { collection, getDocs, query, where } from "firebase/firestore";
+import { DotLoader } from "react-spinners";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -27,6 +28,23 @@ const ItemListContainer = () => {
       setItems(validArray);
     });
   }, [name]);
+
+  if (items.length === 0) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "calc(100vh - 100px)", // Ajusta según la altura de tu navbar y footer
+          marginTop: "50px", // Altura del navbar
+          marginBottom: "50px", // Altura del footer
+        }}
+      >
+        <DotLoader color="#a1a8be" size={30} margin={5} />
+      </div>
+    );
+  }
 
   // const addProducts = () => {
   //   let productsCollection = collection(db, "products");

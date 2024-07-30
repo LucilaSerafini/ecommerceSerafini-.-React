@@ -27,8 +27,6 @@ const ItemDetailContainer = () => {
 
     addToCart(arrayFinal);
     toast.success("Producto agregado al carrito");
-
-    console.log(arrayFinal);
   };
   return <ItemDetail item={item} onAdd={onAdd} initial={initial} />;
 };
