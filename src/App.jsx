@@ -5,10 +5,18 @@ import ItemDetailContainer from "./pages/itemDetailContainer/ItemDetailContainer
 import Layout from "./components/layout/Layout";
 import Checkout from "./pages/checkout/Checkout";
 import { CartContextProvider } from "./components/context/CartContext";
+import { Toaster } from "sonner";
 
 function App() {
   return (
     <BrowserRouter>
+      <Toaster
+        richColors
+        position="bottom-right"
+        toastOptions={{
+          style: { background: "#2e3038", color: "#F3D0C3" },
+        }}
+      />
       <CartContextProvider>
         <Routes>
           <Route element={<Layout />}>

@@ -21,6 +21,14 @@ body {
 
 .itemDetail p {
   color: #2e3038;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 25px;
+}
+
+.containerCounter {
+  display: flex;
+  flex-direction: row;
+}
+
+.counterContainer {
+  margin-right: 100px;
 }

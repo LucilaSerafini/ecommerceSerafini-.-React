@@ -1,8 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
-import { products } from "../../products";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../components/context/CartContext";
+import { db } from "../../firebaseConfig";
+import { collection, doc, getDoc } from "firebase/firestore";
+import { toast } from "sonner";
 
 const ItemDetailContainer = () => {
   const { addToCart, getQuantityById } = useContext(CartContext);
@@ -11,19 +13,20 @@ const ItemDetailContainer = () => {
 
   const [item, setItem] = useState({});
 
-  let initial = getQuantityById(+id);
+  let initial = getQuantityById(id);
 
   useEffect(() => {
-    let product = products.find((product) => product.id === +id);
-    if (product) {
-      setItem(product);
-    }
+    let productsCollection = collection(db, "products");
+    let refDoc = doc(productsCollection, id);
+    let getProduct = getDoc(refDoc);
+    getProduct.then((res) => setItem({ ...res.data(), id: res.id }));
   }, [id]);
 
   const onAdd = (quantity) => {
     let arrayFinal = { ...item, quantity: quantity };
 
     addToCart(arrayFinal);
+    toast.success("Producto agregado al carrito");
 
     console.log(arrayFinal);
   };

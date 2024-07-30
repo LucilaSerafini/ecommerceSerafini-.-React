@@ -4,11 +4,9 @@ import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
 import { db } from "../../firebaseConfig";
 import { collection, getDocs, query, where } from "firebase/firestore";
-import { products } from "../../products";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
-  const [error, setError] = useState({});
   const { name } = useParams();
 
   useEffect(() => {
@@ -30,7 +28,20 @@ const ItemListContainer = () => {
     });
   }, [name]);
 
-  return <ItemList items={items} />;
+  // const addProducts = () => {
+  //   let productsCollection = collection(db, "products");
+
+  //   products.forEach((elemento) => {
+  //     addDoc(productsCollection, elemento);
+  //   });
+  // };
+
+  return (
+    <div>
+      {/* <Button onClick={addProducts}>Agregar products</Button> */}
+      <ItemList items={items} />
+    </div>
+  );
 };
 
 export default ItemListContainer;

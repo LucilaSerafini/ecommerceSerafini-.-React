@@ -4,32 +4,42 @@ import "./counter.css";
 
 export const Counter = ({ restar, contador, sumar, onAdd }) => {
   return (
-    <div className="counterContainer">
+    <div className="containerCounter">
+      <div className="counterContainer">
+        <Button
+          onClick={sumar}
+          style={{
+            fontSize: "24px",
+            color: "#2e3038   ",
+          }}
+        >
+          +
+        </Button>
+        <p> {contador} </p>
+        <Button
+          onClick={restar}
+          style={{
+            fontSize: "34px",
+            color: "#2e3038   ",
+          }}
+        >
+          -
+        </Button>
+      </div>
+
       <Button
-        onClick={sumar}
+        onClick={() => onAdd(contador)}
+        variant="contained"
         style={{
-          fontSize: "24px",
-          minWidth: "40px",
-          minHeight: "40px",
-          color: "#2e3038   ",
+          backgroundColor: "#a1a8be",
+          color: "#2e3038",
+          fontWeight: "bold",
+          fontSize: "15px",
+          borderRadius: "2rem",
         }}
       >
-        +
-      </Button>
-      <p> {contador} </p>
-      <Button
-        onClick={restar}
-        style={{
-          fontSize: "34px",
-          minWidth: "40px",
-          minHeight: "40px",
-          color: "#2e3038   ",
-        }}
-      >
-        -
-      </Button>
-      <Button variant="outlined" onClick={() => onAdd(contador)}>
-        Agregar al carrito
+        {" "}
+        Agregar al carrito{" "}
       </Button>
     </div>
   );

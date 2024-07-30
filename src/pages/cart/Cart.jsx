@@ -33,9 +33,30 @@ const Cart = () => {
       })}
       <h2>El total a pagar es {total}</h2>
       <div>
-        <Button onClick={clearCart}>Limpiar carrito</Button>
+        <Button
+          onClick={clearCart}
+          variant="outlined"
+          style={{
+            color: "#2e3038",
+            fontWeight: "bold",
+            borderColor: "#a1a8be",
+            margin: "50px",
+          }}
+        >
+          Limpiar carrito
+        </Button>
         <Link to="/checkout">
-          <Button variant="contained">Finalizar compra </Button>
+          <Button
+            variant="contained"
+            style={{
+              color: "#2e3038",
+              fontWeight: "bold",
+              backgroundColor: "#a1a8be",
+              margin: "50px",
+            }}
+          >
+            Finalizar compra{" "}
+          </Button>
         </Link>
       </div>
     </div>

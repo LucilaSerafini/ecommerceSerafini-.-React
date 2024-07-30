@@ -1,6 +1,5 @@
 export let products = [
   {
-    id: 1,
     title: "Maranta Leuconera",
     price: 25000,
     description: "lorem ipsu",
@@ -10,7 +9,6 @@ export let products = [
   },
 
   {
-    id: 2,
     title: "Pilea Peperomoides",
     price: 25000,
     description: "lorem ipsu",
@@ -20,7 +18,6 @@ export let products = [
   },
 
   {
-    id: 3,
     title: "Calathea Stromanthe",
     price: 25000,
     description: "lorem ipsu",
@@ -30,7 +27,6 @@ export let products = [
   },
 
   {
-    id: 4,
     title: "Calathea Mil Rayas",
     price: 25000,
     description: "lorem ipsu",
@@ -40,7 +36,6 @@ export let products = [
   },
 
   {
-    id: 5,
     title: "Areca",
     price: 25000,
     description: "lorem ipsu",
@@ -50,7 +45,6 @@ export let products = [
   },
 
   {
-    id: 6,
     title: "Gomero",
     price: 25000,
     description: "lorem ipsu",
@@ -60,7 +54,6 @@ export let products = [
   },
 
   {
-    id: 7,
     title: "Dracaena marginata",
     price: 25000,
     description: "lorem ipsu",
@@ -70,7 +63,6 @@ export let products = [
   },
 
   {
-    id: 8,
     title: "Monstera Adansonii",
     price: 25000,
     description: "lorem ipsu",
