@@ -15,3 +15,29 @@
 - Sooner
 - Cloudinary
 - Material IU
+
+## Instalación y configuración
+
+#### En caso de querer correr el proyecto, seguir los siguientes pasos:
+
+1. Cloná el repositorio
+
+```
+git clone https://github.com/tu-usuarioterraflorens.git
+```
+
+2. Navegá al directorio del proyecto: cd terraflorens
+
+3. Instalá las dependencias:
+
+```
+npm i
+```
+
+4. Ejecutá el proyecto:
+
+```
+npm run dev
+```
+
+##### Por cualquier consulta, comunicate conmigo: lucilaserafinich@gmail.com
