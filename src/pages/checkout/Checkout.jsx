@@ -36,11 +36,11 @@ const Checkout = () => {
     addDoc(ordersCollection, order)
       .then((res) => {
         setOrderId(res.id);
+        toast.success(`¡Gracias por tu compra! Orden de compra n° ${res.id} `);
       })
       .catch()
       .finally(() => {
         navigate("/");
-        toast.success(`¡Gracias por tu compra!`);
         clearCart();
       });
   };
